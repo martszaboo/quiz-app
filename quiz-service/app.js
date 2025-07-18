@@ -112,7 +112,7 @@ const quizController = {
 
 const quizRouter = express.Router();
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../quiz-app/dist/index.html'));
+  res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 quizRouter.route('/quizzes/random').get(quizController.getRandomQuiz);
 quizRouter
@@ -130,6 +130,6 @@ app.use(express.json());
 
 app.use('/', quizRouter);
 
-app.use(express.static(path.join(__dirname, '../quiz-app/dist')));
+app.use(express.static(path.join(__dirname, './dist')));
 
 export default app;
