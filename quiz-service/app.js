@@ -120,11 +120,7 @@ quizRouter
   .post(validateId, quizController.submitAnswer);
 quizRouter.route('/quizzes/:id').get(validateId, quizController.getQuiz);
 
-app.use(
-  cors({
-    origin: ['http://localhost:5173', 'http://localhost:3000'],
-  }),
-);
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
