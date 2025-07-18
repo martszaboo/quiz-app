@@ -1,2 +1,0 @@
-# quiz-app
-quiz-app
