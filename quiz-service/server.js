@@ -3,9 +3,9 @@ import { loadCsv } from './utils/dataLoader.js';
 
 let port = process.env.PORT;
 if (port == null || port == '') {
-  port = 3000;
+  port = 8080;
 }
 
 loadCsv().then(() =>
-  app.listen(port, () => console.log('Csv read. Server started')),
+  app.listen(port, () => console.log('Csv read. Server started on ' + port)),
 );

@@ -52,7 +52,7 @@ const quizController = {
     res.status(200).json({
       id: quiz.ID,
       name: quiz.NAME,
-      presonalDetails: {
+      personalDetails: {
         dateOfBirth: quiz.DATEOFBIRTH,
         placeOfBirth: quiz.PLACEOFBIRTH,
         dateOfDeath: quiz.DATEOFDEATH,
